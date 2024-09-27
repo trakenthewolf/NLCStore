@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLCSTORE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="overlay" class="hidden"></div> <!-- Overlay para el fondo difuminado -->
+    
+    <!-- Alerta Principal -->
+<div id="alert" class="hidden">
+    <span class="close" onclick="closeMainAlert()">&times;</span> <!-- Cruz para cerrar -->
+    <h2>Nuevos Ingresos Disponibles, Revisa nuestro Catálogo</h2>
+</div>
+
+<!-- Alerta de Tarjeta -->
+<div class="alert-card" id="alert-card" style="display: none;">
+    <div class="content">
+        <button class="close-btn" onclick="closeCardAlert()">✖</button>
+        <img src="imagenes/logo.png" alt="Logo" class="alert-logo">
+        <p class="para" id="alert-message"></p>
+    </div>
+</div>
+
+
+    <!-- Sección del Título -->
+    <header>
+        <div class="neon-text">
+            <h1>NLCSTORE</h1>
+        </div>
+    </header>
+
+    <!-- Imagen debajo del Título -->
+    <div class="image-container">
+        <img src="imagenes/back1.png" alt="Descripción de la imagen">
+    </div>
+
+    <!-- Navegación -->
+    <nav>
+        <div class="menu">
+            <div class="item">
+                <a href="#" class="link">
+                    <span>Menu</span>
+                    <svg viewBox="0 0 360 360" xml:space="preserve">
+                        <g id="SVGRepo_iconCarrier">
+                            <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path>
+                        </g>
+                    </svg>
+                </a>
+                <div class="submenu">
+                    <div class="submenu-item">
+                        <a href="index.html" class="submenu-link">Inicio</a>
+                    </div>
+                    <div class="submenu-item">
+                        <a href="https://drive.google.com/file/d/1eRGl_0jgbxxeOOawO7j-lFn21ggP0DkP/view?usp=drive_link" target="_blank" class="submenu-link">Catálogo</a>
+                    </div>
+                    <div class="submenu-item">
+                        <a href="conocenos.html" class="submenu-link">Sobre Nosotros</a>
+                    </div>
+                    <div class="submenu-item">
+                        <a href="https://api.whatsapp.com/send?phone=542616012677&text=%F0%9F%91%8BHola%20%2C%20quiero%20hacer%20una%20consulta%F0%9F%98%80%F0%9F%96%90%EF%B8%8F" target="_blank" class="submenu-link">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Principal (Página 1) -->
+    <main id="home" class="main-section">
+        <h1>Stock Limitado</h1>
+        <p>No te pierdas el producto que quieres</p>
+        <div class="sale-info">
+            <p>INICIO VENTA </p>
+            <h2>LUNES</h2>
+            <p>30/09/2024</p>
+        </div>
+    </main>
+
+    <section class="popular-section">
+        <div class="card-container">
+            <div class="card" onclick="showAlert('Hacemos envios por correo Argentino.')">
+                <p class="heading">Envíos</p>
+                <p>Todo el País</p>
+                <p>Click Mas info</p>
+            </div>
+            <div class="card" onclick="showAlert('Soporte las 24 hrs, contactanos ante cualquier duda o inconveniente.')">
+                <p class="heading">Soporte</p>
+                <p>24hrs</p>
+                <p>Click Mas info</p>
+            </div>
+            <div class="card" onclick="showAlert('Seguimiento de pedidos en tiempo real.')">
+                <p class="heading">Seguimiento</p>
+                <p>24hrs</p>
+                <p>Click Mas info</p>
+            </div>
+            <div class="card" onclick="showAlert('No dudes en ver nuestro Catálogo')">
+                <p class="heading">Variedad</p>
+                <p>Catálogo</p>
+                <p>Click Mas info</p>
+            </div>
+        </div>
+    </section>
+    
+ 
+    
+    <script src="script.js"></script> <!-- Enlace a tu JavaScript -->
+
+    <div class="space"></div> <!-- Espacio extra entre secciones -->
+    <div id="loader" class="loader">
+        <div class="glitch" data-glitch="Loading...">Loading...</div>
+    </div>
+</body>
+</html>
